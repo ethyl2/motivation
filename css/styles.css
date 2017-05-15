@@ -1,0 +1,32 @@
+.jumbotron {
+    background-color: #431c5d;
+    color: #ffffff;
+    padding: 100px 25px;
+}
+
+.bg-grey {
+    background-color: #e6e9f0;
+}
+
+.container-fluid {
+    padding: 60px 50px;
+}
+
+.logo {
+    font-size: 200px;
+}
+@media screen and (max-width: 768px) {
+    .col-sm-6 {
+        text-align: center;
+        margin: 25px 0;
+    }
+}
+
+/* Here are the colors to use:
+#bccbde
+#c2dde6
+#e6e9f0
+#431c5d
+#e05915
+#cdd422
+*/
