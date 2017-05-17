@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="css/styles.css">
   <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+
   <link rel="shortcut icon" type="image/png" href="img/pacman-hexagons-32-149047.png">
 </head>
 
@@ -33,16 +36,16 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-sm-8">
         <h2>About Evalu8ion.me</h2>
         <h4>Simply by signing up and inputting your data, you will get personalized and
           effective motivational feedback. Our algorithms will take your data and
           will find what truly motivates you. </h4>
         <button class="btn btn-default btn-lg">Get in Touch</button>
       </div>
-      <div class="col-sm-6">
+      <div class="col-sm-4">
         <span class="img-responsive">
-          <img src="img/Artificial-Intelligence_orange_400.jpg"</span>
+          <img src="img/artificial_intelligence_orange_225.jpg"</span>
       </div>
   </div>
 </div>
@@ -51,7 +54,7 @@
   <div class="row">
     <div class="col-sm-6">
       <span class="img-responsive">
-        <img src="img/Success_purple_400.jpg"</span>
+        <img src="img/success_purple_400.jpg"</span>
     </div>
     <div class="col-sm-6">
       <h2>Our Values</h2>
@@ -69,21 +72,113 @@
   <br>
   <div class="row">
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-scale"></span>
+      <span class="glyphicon glyphicon-scale small"></span>
       <h4>WEIGHT TRACKING</h4>
       <p>Enter your weight each day to see your trends and tendencies.</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-send"></span>
+      <span class="glyphicon glyphicon-send small "></span>
       <h4>FEEDBACK</h4>
       <p>We will send you motivational email and/or texts in return.</p>
     </div>
     <div class="col-sm-4">
-      <span class="glyphicon glyphicon-plus"></span>
+      <span class="glyphicon glyphicon-plus small"></span>
       <h4>FUTURE APPLICATIONS</h4>
       <p>More motivational features are coming soon!</p>
     </div>
   </div>
+</div>
+
+<div class="container-fluid text-center bg-grey">
+  <h2>Better Living Through Data Analysis</h2>
+  <h4>Benefits of Making Goals and Achieving Them</h4>
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="thumbnail">
+          <img src="img/heartbeatw-400px_orange_cropped.png" alt="Health">
+          <p><strong>Better Health</strong></p>
+          <p>Make choices to take good care of your body.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="thumbnail">
+          <img src="img/brain_400_purple_cropped.png" alt="Brain">
+          <p><strong>Better Learning</strong></p>
+          <p>You can learn more effectively and better retain what you've learned.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="thumbnail">
+          <img src="img/sleep_400_blue.jpg" alt="Sleep">
+          <p><strong>Better Sleep</strong></p>
+          <p>Feel more rested and productive.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="machine-learning">
+  <h2 class="text-center">Why We Use Machine Learning</h2>
+    <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+      <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <h3><strong>What is machine learning?</strong></h3>
+      <span style="font-style:normal;">
+      <p>"Machine learning is a method of data analysis that automates analytical
+      model building. Using algorithms that iteratively learn from data,
+      machine learning allows computers to find hidden insights without
+      being explicitly programmed where to look." (<a href="https://www.sas.com/en_us/insights/analytics/machine-learning.html#"
+      target="_new">https://www.sas.com</a>)</p>
+      </span>
+    </div>
+    <div class="item">
+      <h3><strong>How does machine learning relate to artificial intelligence?</strong></h3>
+        <span style="font-style:normal;">
+          <p>"Artificial intelligence is, essentially, the simulation of intelligence
+          in computers. Machine learning, on the other hand, is a form of artificial
+          intelligence in which the computer learns for itself how to complete a task.
+          And it’s this that has been at the heart of many of the recent huge
+          developments in the field of AI." (<a href="https://medium.com/on-coding/what-is-machine-learning-and-why-is-it-important-4255000e19bc"
+            target="_blank">https://medium.com</a>)</p></span>
+    </div>
+    <div class="item">
+      <h3><strong>Why is machine learning important?</strong></h3>
+        <span style="font-style:normal;">
+          <p>"'Machine learning' is a revolution as big as the internet or personal computers.
+            We're in the middle of a historic moment. Now computers can learn from experience.
+            This breakthrough is unimaginably important for understanding where technology
+            is going, and where society is going with it." (<a href="http://www.businessinsider.com/machine-learning-as-important-as-the-internet-2016-3"
+            target="_blank">www.businessinsider.com</a>)</span></h4>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 </div>
 
 </body>
