@@ -26,10 +26,32 @@ $( document ).ready(function() {
   });
 });
 
+$(window).scroll(function() {
+  $(".slideanim").each(function(){
+    var pos = $(this).offset().top;
+
+    var winTop = $(window).scrollTop();
+    if (pos < winTop + 600) {
+      $(this).addClass("slide");
+    }
+  });
+});
+
 var subscribeList = [];
 function subscribe() {
   var email = $("#subscribe-email").val();
   subscribeList.push(email);
   console.log(subscribeList);
   $("#subscribe-message").text(email + " is successfully subscribed.");
+}
+
+var modalList = [];
+function addModalEntry() {
+  var comments = $("#modal-comments").val();
+  var name = $("#modal-name").val();
+  var email = $("#modal-email").val();
+  var entry = {"comments": comments, "name": name, "email": email};
+  modalList.push(entry);
+  console.log(modalList);
+  $("#response").text("Thank you, " + name + ", for your comments.");
 }
