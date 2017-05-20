@@ -189,6 +189,38 @@ footer .glyphicon {
     }
 }
 
+table {
+  width: 80%;
+  margin: auto;
+}
+
+table, th, td {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #c2dde6;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #431c5d;
+}
+
+table caption {
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 2em;
+}
+
+tr:hover {
+  background-color: #bccbde;
+}
+
+tr:nth-child(even){background-color: #e6e9f0;}
+
 /* Here are the colors to use:
 #bccbde
 #c2dde6

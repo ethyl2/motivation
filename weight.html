@@ -43,23 +43,47 @@
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="weight-number" type="number" placeholder="Weight">
+          <input class="form-control" id="weight-date" type="date" placeholder"Date">
         </div>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="weight-date" type="date" placeholder"Date">
+          <input class="form-control" id="weight-number" type="number" placeholder="Weight">
         </div>
+      </div>
+      <div class="row">
+        <fieldset class="form-group">
+          <div class="col-sm-3">
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="weightUnits" id="pounds" value="pounds" checked>
+                pounds
+              </label>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="weightUnits" id="kilograms" value="kilograms">
+                kilograms
+              </label>
+            </div>
+          </div>
+        </fieldset>
       </div>
       <div class="row">
         <div class="col-sm-6 form-group">
           <button class="btn btn-default" type="submit" onclick="sendWeight()">Submit</button>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-12">
-          <p id="weight-response"></p>
-        </div>
+    </div>
+  </div>
+</div>
+
+<div id="weight" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="weight-response">
       </div>
     </div>
   </div>

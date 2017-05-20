@@ -71,34 +71,40 @@ function sendContactInfo() {
     " We'll never share your email with anyone else." +
     " We will get back to you shortly.");
 }
-/*
-var weightList = [
-  {"email": "test@gmail.com",
-    "entries":
-      {"date": "05-19-2017",
-      "weight": "150"},
-      {"date": "05-18-2017",
-      "weight": "149"}
-  },
 
-  {"email": "test2@gmail.com",
-    "entries":
-      {"date": "05-19-2017",
-      "weight": "110"},
-      {"date": "05-18-2017",
-      "weight": "115"}
+// weightList includes 1 sample entry
+var weightList = {
+  "test@gmail.com": {
+    "weights": [140],
+    "dates": ["2017-05-19"],
+    "weightUnit": ["pounds"]
   }
-];
-*/
-var weightList = [];
+}
 
 function sendWeight() {
   var email = $("#weight-email").val();
-  var number = $("#weight-number").val();
+  var userNumber = parseFloat($("#weight-number").val());
   var userDate = $("#weight-date").val();
+  var weightUnit = $("input[name=weightUnits]:checked").val();
+
   if (weightList[email]) {
-    console.log("Already in weightList");
+    weightList[email]["weights"].push(userNumber);
+    weightList[email]["dates"].push(userDate);
+    weightList[email]["weightUnit"].push(weightUnit);
   } else {
-    console.log("Time to add user to weightList");
+    weightList[email] = {"weights": [userNumber],
+      "dates": [userDate],
+      "weightUnit": [weightUnit]};
   }
-}
+  console.log(weightList);
+
+  var userTable = "<table>" +
+    "<caption>" + email + "</caption>" +
+    "<tr><th>Date</th>" +
+    "<th>Weight</th>" +
+    "<th>Unit</th></tr>" +
+    "<tr><td>" + userDate + "</td><td>" +
+    userNumber + "</td><td>" +
+    weightUnit + "</td></tr></table>";
+  $("#weight-response").html(userTable);
+};
