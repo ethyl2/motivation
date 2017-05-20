@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>evalu8ion.me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Hammersmith+One" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="js/jquery-2.2.4.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.matchHeight.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+
+  <link rel="shortcut icon" type="image/png" href="img/pacman-hexagons-32-149047.png">
+</head>
+
+<body>
+
+<div id="weight" class="container-fluid bg-grey">
+  <div class="row text-center bg-purple bg-blue">
+    <div class="col-sm-12">
+      <h1>Weight Tracking</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <h3> Enter your email, weight and date below:</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2 col-md-offset-2">
+      <span class="glyphicon glyphicon-scale large"></span>
+    </div>
+
+    <div class="col-sm-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="weight-email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="weight-number" type="number" placeholder="Weight">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="weight-date" type="date" placeholder"Date">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <button class="btn btn-default" type="submit" onclick="sendWeight()">Submit</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <p id="weight-response"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid text-center">
+  <a href="index.html">
+    <span class="glyphicon glyphicon-home small">
+  </a></span>
+<footer>
+
+
+</body>
+<html>

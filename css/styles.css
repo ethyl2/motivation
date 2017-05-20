@@ -2,6 +2,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
 h2 {
     font-size: 24px;
     text-transform: uppercase;
@@ -57,7 +61,12 @@ h4 {
 }
 
 .bg-grey {
-    background-color: #e6e9f0;
+  background-color: #e6e9f0;
+}
+
+.bg-blue {
+  background-color: #c2dde6;
+  padding: 25px;
 }
 
 .container-fluid {
@@ -65,13 +74,18 @@ h4 {
 }
 
 .modal-title {
-  background-color: #431c5d
+  background-color: #431c5d;
   color: white;
 }
 
 .small {
   color: #cdd422;
   font-size: 50px;
+}
+
+.large {
+  color: #cdd422;
+  font-size: 140px;
 }
 
 @media screen and (max-width: 768px) {

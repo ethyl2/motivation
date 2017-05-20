@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+  // Create boxes with equal height for box class columns
   $('.box').matchHeight();
 
   // Add smooth scrolling to all links in navbar + footer link
@@ -42,7 +43,8 @@ function subscribe() {
   var email = $("#subscribe-email").val();
   subscribeList.push(email);
   console.log(subscribeList);
-  $("#subscribe-message").text(email + " is successfully subscribed.");
+  $("#subscribe-message").text(email + " is successfully subscribed." +
+  " We'll never share your email with anyone else.");
 }
 
 var modalList = [];
@@ -53,5 +55,50 @@ function addModalEntry() {
   var entry = {"comments": comments, "name": name, "email": email};
   modalList.push(entry);
   console.log(modalList);
-  $("#response").text("Thank you, " + name + ", for your comments.");
+  $("#response").text("Thank you, " + name + ", for your comments." +
+  " We'll never share your email with anyone else.");
+}
+
+var contactList = [];
+function sendContactInfo() {
+  var name = $("#contact-name").val();
+  var email = $("#contact-email").val();
+  var comments = $("#contact-comments").val();
+  var entry = {"name": name, "email": email, "comments": comments};
+  contactList.push(entry);
+  console.log(contactList);
+  $("#contact-response").text("Thank you, " + name + ", for your comments." +
+    " We'll never share your email with anyone else." +
+    " We will get back to you shortly.");
+}
+/*
+var weightList = [
+  {"email": "test@gmail.com",
+    "entries":
+      {"date": "05-19-2017",
+      "weight": "150"},
+      {"date": "05-18-2017",
+      "weight": "149"}
+  },
+
+  {"email": "test2@gmail.com",
+    "entries":
+      {"date": "05-19-2017",
+      "weight": "110"},
+      {"date": "05-18-2017",
+      "weight": "115"}
+  }
+];
+*/
+var weightList = [];
+
+function sendWeight() {
+  var email = $("#weight-email").val();
+  var number = $("#weight-number").val();
+  var userDate = $("#weight-date").val();
+  if (weightList[email]) {
+    console.log("Already in weightList");
+  } else {
+    console.log("Time to add user to weightList");
+  }
 }
