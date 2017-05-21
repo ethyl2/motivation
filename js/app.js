@@ -25,6 +25,12 @@ $( document ).ready(function() {
       });
     } // End if
   });
+
+  var today = new Date();
+  //Get current date from Date object in Y-m-d format.
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var dateFormat = (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getFullYear();
+  console.log(dateFormat);
 });
 
 $(window).scroll(function() {
@@ -77,7 +83,7 @@ var weightList = {
   "test@gmail.com": {
     "weights": [140],
     "dates": ["2017-05-19"],
-    "weightUnit": ["pounds"]
+    "weightUnits": ["pounds"]
   }
 }
 
@@ -90,11 +96,11 @@ function sendWeight() {
   if (weightList[email]) {
     weightList[email]["weights"].push(userNumber);
     weightList[email]["dates"].push(userDate);
-    weightList[email]["weightUnit"].push(weightUnit);
+    weightList[email]["weightUnits"].push(weightUnit);
   } else {
     weightList[email] = {"weights": [userNumber],
       "dates": [userDate],
-      "weightUnit": [weightUnit]};
+      "weightUnits": [weightUnit]};
   }
   console.log(weightList);
 
@@ -102,9 +108,13 @@ function sendWeight() {
     "<caption>" + email + "</caption>" +
     "<tr><th>Date</th>" +
     "<th>Weight</th>" +
-    "<th>Unit</th></tr>" +
-    "<tr><td>" + userDate + "</td><td>" +
-    userNumber + "</td><td>" +
-    weightUnit + "</td></tr></table>";
+    "<th>Unit</th></tr>";
+  for (var i=0; i< weightList[email]["dates"].length; i++) {
+    userTable += ("<tr><td>" + weightList[email]["dates"][i] + "</td><td>"
+     + weightList[email]["weights"][i] + "</td><td>" +
+     weightList[email]["weightUnits"][i] + "</td>");
+  }
+  userTable += "</table>";
+
   $("#weight-response").html(userTable);
 };
