@@ -1,5 +1,5 @@
 app.get('/', (req, res) => {
-  res.status(200).send("Hello, world!");
+  res.status(200).sendfile('index.html');
 });
 //[END hello_world]
 
